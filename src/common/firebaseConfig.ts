@@ -1,14 +1,11 @@
 // eslint-disable-next-line import/no-mutable-exports, @typescript-eslint/ban-types
 const firebaseConfig: Object = {
-  apiKey: 'AIzaSyD17Gesj-E5ZN0iUFnV913QOun4cTIFrAc',
-  authDomain: 'v-project-chillhaze.firebaseapp.com',
-  databaseURL:
-    'https://v-project-chillhaze-default-rtdb.europe-west1.firebasedatabase.app',
-  projectId: 'v-project-chillhaze',
-  storageBucket: 'v-project-chillhaze.appspot.com',
-  messagingSenderId: '120861013061',
-  appId: '1:120861013061:web:cdc9cde9fc2bce8b3b5f2c',
-  measurementId: 'G-RNLTST1LQ4',
+  apiKey: 'AIzaSyBLrxNCYXq-HLx6tbEBHVGT3ogCjAg5dzI',
+  authDomain: 'flats-project-fabf7.firebaseapp.com',
+  projectId: 'flats-project-fabf7',
+  storageBucket: 'flats-project-fabf7.appspot.com',
+  messagingSenderId: '96803203369',
+  appId: '1:96803203369:web:3c453e8daab7186f13ef38',
 };
 
 export default firebaseConfig;
