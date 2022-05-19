@@ -1,39 +1,13 @@
-import React, { useContext } from 'react';
-import { Box } from '@mui/material';
-import firebase from 'firebase/app';
-import { useUser } from 'reactfire';
-import clearFirestoreCache from '../../../common/clearFirestoreCache';
-import Header from '../Header';
-import { UIContext } from '../UIContext';
+import React from 'react';
+import { Box, Button } from '@mui/material';
+
+import { useHistory } from 'react-router-dom';
 
 const HomeScreen: React.FC = () => {
-  const { data: user } = useUser();
-  const { setAlert } = useContext(UIContext);
+  const history = useHistory();
 
-  const handleSignOut = async () => {
-    try {
-      await firebase
-        .auth()
-        .signOut()
-        .then(() => {
-          clearFirestoreCache();
-          setAlert({
-            show: true,
-            severity: 'info',
-            message: 'You`ve successfully signed out',
-          });
-        });
-    } catch (error) {
-      if (error instanceof Error) {
-        setAlert({
-          show: true,
-          severity: 'error',
-          message: error.message,
-        });
-      } else {
-        throw error;
-      }
-    }
+  const handleRedirect = () => {
+    history.push('/flats');
   };
 
   return (
@@ -46,7 +20,11 @@ const HomeScreen: React.FC = () => {
         flexGrow: 1,
       }}
     >
-      <Header handleSignOut={handleSignOut} user={user} />
+      <Box>
+        <Button variant="contained" onClick={handleRedirect}>
+          Explore Flats
+        </Button>
+      </Box>
     </Box>
   );
 };

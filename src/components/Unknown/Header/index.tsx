@@ -48,7 +48,7 @@ const Header: React.FunctionComponent<IHeaderProps> = ({
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Flats
+              Flats project
             </Typography>
 
             <Box>

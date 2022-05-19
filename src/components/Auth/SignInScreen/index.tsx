@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import { Button, Paper, Typography } from '@mui/material';
 import firebase from 'firebase/app';
 import { useHistory } from 'react-router-dom';
-import { border } from '@mui/system';
 import { UIContext } from '../../Unknown/UIContext';
 import HeroImage from '../../../images/Hero-image.jpg';
 import LoginForm from '../../Unknown/LoginForm';
