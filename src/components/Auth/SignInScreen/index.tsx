@@ -112,7 +112,7 @@ const SignInScreen: React.FC = () => {
                   marginBottom: (t) => t.spacing(1),
                   fontWeight: 600,
                   fontSize: 14,
-                  letterSpacing: '-1.5px',
+                  letterSpacing: '-0.5px',
                 }}
               >
                 Don’t have an account?

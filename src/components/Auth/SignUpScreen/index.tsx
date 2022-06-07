@@ -106,7 +106,7 @@ const SignUpScreen: React.FC = () => {
                     fontWeight: 'bold',
                     fontSize: 40,
                     lineHeight: '112.03px',
-                    letterSpacing: '-1.5px',
+                    letterSpacing: '-0.5px',
                   }}
                 >
                   Register
