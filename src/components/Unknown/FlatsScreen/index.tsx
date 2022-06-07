@@ -36,8 +36,6 @@ const FlatsScreen: React.FC = () => {
           ...doc.data(),
         }));
 
-        console.log('data', data);
-
         setFlats(data);
       });
     } catch (error) {
@@ -60,39 +58,37 @@ const FlatsScreen: React.FC = () => {
           backgroundColor: 'white',
         }}
       >
-        {flats && (
-          <Autocomplete
-            sx={{
-              width: '450px',
-            }}
-            freeSolo
-            id="search"
-            disableClearable
-            options={flats.map((option) => option.city)}
-            renderInput={(params) => (
-              <TextField
-                variant="filled"
-                {...params}
-                label="City"
-                InputProps={{
-                  ...params.InputProps,
-                  type: 'search',
-                  disableUnderline: true,
-                  placeholder: 'Type something',
-                  endAdornment: (
-                    <IconButton
-                      sx={{ p: '10px' }}
-                      aria-label="search"
-                      onClick={handleSubmit}
-                    >
-                      <SearchIcon />
-                    </IconButton>
-                  ),
-                }}
-              />
-            )}
-          />
-        )}
+        <Autocomplete
+          sx={{
+            width: '450px',
+          }}
+          freeSolo
+          id="search"
+          disableClearable
+          options={flats ? flats.map((option) => option.city) : []}
+          renderInput={(params) => (
+            <TextField
+              variant="filled"
+              {...params}
+              label="City"
+              InputProps={{
+                ...params.InputProps,
+                type: 'search',
+                disableUnderline: true,
+                placeholder: 'Type something',
+                endAdornment: (
+                  <IconButton
+                    sx={{ p: '10px' }}
+                    aria-label="search"
+                    onClick={handleSubmit}
+                  >
+                    <SearchIcon />
+                  </IconButton>
+                ),
+              }}
+            />
+          )}
+        />
       </Box>
 
       <Box sx={{ fontWeight: 600, fontSize: 30, mt: 20, mb: 10 }}>
